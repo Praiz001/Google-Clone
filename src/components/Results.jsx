@@ -19,6 +19,7 @@ export const Results = () => {
             }
         }
         // getResults('/search/q=JavaScript Mastery&num=40')
+    // eslint-disable-next-line
     }, [searchTerm, location.pathname]);
 
     if (isLoading) return <Loading />

@@ -8,10 +8,11 @@ import Links  from './Links.jsx'
 export const Search = () => {
     const { setSearchTerm } = useResultContext();
     const [text, setText] = useState('');
-    const [debouncedValue] = useDebounce(text, 3000);
+    const [debouncedValue] = useDebounce(text, 300);
 
   useEffect(() => {
     if (debouncedValue) setSearchTerm(debouncedValue);
+  // eslint-disable-next-line
   }, [debouncedValue]);
 
     return (
